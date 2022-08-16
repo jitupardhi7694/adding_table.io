@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Registration-form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="mt-4">
+                <form id="form1">
+                    <div class="md-2">
+                        <!-- form start -->
+                        <div class="container">
+                            <!-- Relation  block 2 start  -->
+                            <div class="row align-items-center">
+                                <div class="col mt-1 text-center bg-dark text-white">
+                                    <b>DETAILS OF FAMILY MEMBERS SAYING WITH THE PATIENT</b>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- table start -->
+                        <div class="mt-4"></div>
+                        <table class="table" id="table1">
+                            <thead>
+                                <tr class="text-center">
+                                    <th scope="col" class="col-ml-2">SrNo</th>
+                                    <th scope="col" class="col-md-2">Name Of The Member</th>
+                                    <th scope="col" class="col-md-2">Relation With Patient</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Education</th>
+                                    <th scope="col">Occupation</th>
+                                    <th scope="col">Mobile Number</th>
+                                    <th>Action</th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col">
+                                            <b>1</b>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" name="name" id="name">
+                                            <!-- <label>Name Of The Member</label> -->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" name="relation" id="relation">
+                                        </div>
+                                        <!-- <label for="">Relation With patient</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="age" name="age">
+                                        </div>
+                                        <!-- <label for="">Age</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="education" name="education">
+                                        </div>
+                                        <!-- <label for="">Education</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="occupation" name="occupation">
+                                        </div>
+                                        <!-- <label for="">Occupation</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="mobile_number"
+                                                name="mobile_number">
+                                        </div>
+                                        <!-- <label for="">Mobile number</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <a type="button" class="btn btn-danger" name="edit" id="edit">Edit</a>
+                                            <a type="button" class="btn btn-warning" onclick="deleteRow(this)" id="delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <a class="btn btn-info" id="add">Add</a>
+
+                        <div class="mb-4"></div>
+                        <!-- table end -->
+                        <div class="mt-4"></div>
+
+                        <!-- second table start  -->
+
+                        <div class="container">
+                            <!-- Relation  block 2 start  -->
+                            <div class="row align-items-center">
+                                <div class="col mt-1 text-center bg-dark text-white">
+                                    <b>DETAILS OF CLOSE FAMILY MEMBERS & FRIENDS NOT SAYING WITH THE PATIENT</b>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- table start -->
+                        <div class="mt-4"></div>
+                        <table class="table js-serial" id="table2">
+                            <thead>
+                                <tr class="text-center " id="tr1">
+                                    <th scope="col" class="col-ml-2">SrNo</th>
+                                    <th scope="col" class="col-md-2">Name Of The Member</th>
+                                    <th scope="col" class="col-md-2">Relation With Patient</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Education</th>
+                                    <th scope="col">Occupation</th>
+                                    <th scope="col">Mobile Number</th>
+                                    <th>Located At</th>
+                                    <th>Action</th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col">
+                                            <b>1</b>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" name="name1" id="name1">
+                                            <!-- <label>Name Of The Member</label> -->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" name="relation1" id="relation1">
+                                        </div>
+                                        <!-- <label for="">Relation With patient</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="age1" name="age1">
+                                        </div>
+                                        <!-- <label for="">Age</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="education1" name="education1">
+                                        </div>
+                                        <!-- <label for="">Education</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="occupation1" name="occupation1">
+                                        </div>
+
+                                        <!-- <label for="">Occupation</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="mobile_number1"
+                                                name="mobile_number1">
+                                        </div>
+                                        <!-- <label for="">Mobile number</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="located_at" name="located_at">
+                                        </div>
+                                        <!-- <label for="">Mobile number</label> -->
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <a class="btn btn-danger" name="edit1" id="edit1">Edit</a>
+                                            <a class="btn btn-warning" name="delete1" onclick="deleteRows2(this)" id="delete1">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <a class="btn btn-info" id="add1">Add</a>
+
+                        <div class="mb-4"></div>
+                        <!-- table end -->
+                        <div class="d-grid gap-2 text-center d-md-block">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-secondary" type="reset">Reset</button>
+                        </div>
+                        <!-- form end  -->
+                        <!-- </form> -->
+                    </div>
+                    <!-- second table end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./nitin.js"></script>
+
+</body>
+
+</html>
